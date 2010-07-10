@@ -5,6 +5,7 @@ public class Spot {
 	private int currentWindSpeedKnots;
 	private int currentWaveHeight;
 	private int currentWindDirection;
+	private String awdUrlWindsnelheid;
 
 	public int getCurrentWindSpeedKnots() {
 		return currentWindSpeedKnots;
@@ -41,10 +42,28 @@ public class Spot {
 	public Spot(String name) {
 		this.name = name;
 	}
+
 	public Spot(String name, int windSpeed, int windDirection, int waveHeight) {
 		this.name = name;
 		this.currentWaveHeight = waveHeight;
 		this.currentWindDirection = windDirection;
 		this.currentWindSpeedKnots = windSpeed;
+	}
+
+	public Spot(String name, int windSpeed, int windDirection, int waveHeight, String awdUrlWindsnelheid, String awdUrlWindrichting) {
+		this.name = name;
+		this.currentWaveHeight = waveHeight;
+		this.currentWindDirection = windDirection;
+		this.currentWindSpeedKnots = windSpeed;
+		this.awdUrlWindsnelheid = awdUrlWindsnelheid;
+		
+	}
+	
+	public void setAwdUrlWindgegevens(String awdUrlWindgegevens) {
+		this.awdUrlWindsnelheid = awdUrlWindgegevens;
+	}
+
+	public String getAwdUrlWindgegevens() {
+		return awdUrlWindsnelheid;
 	}
 }
